@@ -1,9 +1,9 @@
 puts "gets（キーボード入力された値を取得する）"
 puts "風見雄二の姉の名前は？"
-answer=gets
-if answer=="風見一姫"
+answer=gets.chomp
+if answer=="風見一姫" then
   puts "正解！！"
-elsif answer=="風見聡子"
+elsif answer=="風見聡子" then
   puts "残念！それは母親です！！"
 else
   puts "残念！！"
@@ -51,3 +51,14 @@ while n <= 10 do
   puts n
   n+=1 #iの数値に1を加えたい時は、i = i +1と書く代わりに、i += 1と書くことができます。
 end
+
+puts "演習問題"
+puts "計算を始めます。"
+puts "一つ目の数字を入力してください。"
+number1=gets.to_i
+puts "二つ目の数字を入力してください。"
+number2=gets.to_i
+puts "計算結果を出力します。"
+answer_number=number1*number2
+puts "#{number1}×#{number2}=#{answer_number}"
+puts "計算を終了します"
