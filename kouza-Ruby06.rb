@@ -1,20 +1,38 @@
-dice=#変数diceに0を代入し、初期値を設定する
-#whileは条件の間処理が繰り返される
-while dice !=6 do#"dice !=n"=条件
-  dice=rand(1..6)#処理
+puts "gets（キーボード入力された値を取得する）"
+puts "風見雄二の姉の名前は？"
+answer=gets
+if answer=="風見一姫"
+  puts "正解！！"
+elsif answer=="風見聡子"
+  puts "残念！それは母親です！！"
+else
+  puts "残念！！"
+end
+puts "入力された内容は#{answer}"
+
+puts "\nwhile文（指定した条件が真の間、繰り返し実行される）"
+puts "ランダム変数4が出るまで繰り返し実行される"
+puts "※変数=rand(1..4)で1~4のランダムな数字を取り出す"
+dice=0 #変数diceに0を代入し、初期値を設定する
+while dice !=4 do#"dice !=n"=条件
+  dice=rand(1..4)#処理
   puts dice
 end
 
-puts "for 変数 in 範囲 do文"
-for i in 1..6 do
+
+puts "\nfor文（指定したオブジェクトから順に値を取り出しながら繰り返される）"
+puts "変数iが1~4まで順に実行される"
+for i in 1..4 do #for 変数 in 範囲 do
   puts i
 end
 
+puts "\neach文（オブジェクト内の要素を順に取り出す）"
+puts "変数amount内の要素を先頭から順に取り出す"
 amounts = {"リンゴ"=>2, "イチゴ"=>5, "オレンジ"=>3}
 amounts.each do |fruit, amount|
   puts "#{fruit}は#{amount}個です。"
 end
-
+puts "each文2"
 #each文について（範囲、ハッシュ、配列などを指定）.each do |変数|
 amounts={"グー"=>"winner","チョキ"=>"loser","パー"=>"drow"}
 amounts.each do |amount,duel|
@@ -23,3 +41,13 @@ amounts.each do |amount,duel|
 #end
 end
 
+puts "\nbreak文（繰り返し処理を中断する）"
+n = 0
+while n <= 10 do
+  if n == 5
+    puts "処理を終了します"
+    break
+  end
+  puts n
+  n+=1 #iの数値に1を加えたい時は、i = i +1と書く代わりに、i += 1と書くことができます。
+end
