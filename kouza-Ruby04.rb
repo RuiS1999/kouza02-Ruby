@@ -13,3 +13,6 @@ puts "#{name}さんの体重は#{weight}kgです"  # この行を追加
 puts '#{name}さんの体重は#{weight}kgです'  # この行を追加
 names = ["Git", "HTML", "CSS"]
 puts names[1]
+
+#[]は[n]で用いる
+#{}は{n=>x}で用いる
